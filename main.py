@@ -45,10 +45,3 @@ if __name__ == "__main__":
     for day_name, names in result.items():
         print(f"{day_name}: {', '.join(names)}")
 
-'''
-users = [
-    {"name": "Bill", "birthday": datetime(1955, 8, 31).date()},
-    {"name": "Jan", "birthday": datetime(1987, 8, 30).date()},
-    {"name": "Kim", "birthday": datetime(1976, 9, 4).date}
-]
-'''
