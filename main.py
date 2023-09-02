@@ -20,13 +20,8 @@ def get_birthdays_per_week(users):
             if birthday_this_year < current_date:
                 continue
 
-            elif birthday_this_year < current_date:
-                # День народження вже минув у цьому році, перевіряємо на наступний рік. Ось тут помику не можу зрозуміти
-                birthday_this_year = birthday.replace(year=current_year + 1)
-                if birthday_this_year.weekday() >= 5:
-                    birthday_this_year += timedelta(days=(7 - birthday_this_year.weekday()))
 
-            elif birthday_this_year.weekday() >= 5:
+            if birthday_this_year.weekday() >= 5:
                 # Якщо день народження випав на вихідний, то відображаємо його в понеділок
                 birthday_this_year += timedelta(days=(7 - birthday_this_year.weekday()))
 
